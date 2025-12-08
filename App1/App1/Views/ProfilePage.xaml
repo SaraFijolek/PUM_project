@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             x:Class="App1.Views.ProfilePage"
+             Title="Profil">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="12">
+
+            <Label Text="Profil" FontSize="26" HorizontalOptions="Center" />
+
+            <Entry x:Name="nameEntry" Placeholder="Imię" />
+            <Entry x:Name="surnameEntry" Placeholder="Nazwisko" />
+
+            <DatePicker x:Name="birthDatePicker"
+                        MaximumDate="{x:Static system:DateTime.Today}" />
+
+            <Picker x:Name="genderPicker" Title="Płeć">
+                <Picker.Items>
+                    <x:String>Mężczyzna</x:String>
+                    <x:String>Kobieta</x:String>
+                    <x:String>Inna</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Entry x:Name="heightEntry" Placeholder="Wzrost (cm)" Keyboard="Numeric" />
+            <Entry x:Name="weightEntry" Placeholder="Waga (kg)" Keyboard="Numeric" />
+
+            <Button x:Name="saveBtn" Text="Zapisz" Clicked="SaveBtn_Clicked" />
+
+            <Label x:Name="messageLabel" TextColor="Red" IsVisible="False" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
