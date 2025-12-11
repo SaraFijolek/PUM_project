@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using App1.Services;
+using FitnessApp.UI;
 
 namespace App1.Views
 {
@@ -11,20 +12,20 @@ namespace App1.Views
 
         public ProfilePage(ApiClient apiClient)
         {
-            InitializeComponent(); // Niezbędne, aby x:Name działało
+            InitializeComponent();
             api = apiClient;
 
-            // Opcjonalnie ustawienie MaximumDate, jeśli nie ustawiono w XAML
             birthDatePicker.MaximumDate = DateTime.Today;
+            Localize();
         }
 
-        // Handler powiązany z XAML: Clicked="SaveBtn_Clicked"
+        
         private async void SaveBtn_Clicked(object sender, EventArgs e)
         {
             await OnSaveClicked();
         }
 
-        // Logika aktualizacji profilu
+        
         private async Task OnSaveClicked()
         {
             messageLabel.IsVisible = false;
@@ -33,6 +34,7 @@ namespace App1.Views
             string surname = surnameEntry.Text?.Trim();
             DateTime birthDate = birthDatePicker.Date;
             string gender = genderPicker.SelectedItem?.ToString();
+            string avatar = avatarEntry.Text?.Trim();
 
             double? height = null;
             if (!string.IsNullOrWhiteSpace(heightEntry.Text) && double.TryParse(heightEntry.Text, out var h))
@@ -50,7 +52,7 @@ namespace App1.Views
 
             try
             {
-                var result = await api.UpdateProfileAsync(name, surname, birthDate, gender, height, weight, null);
+                var result = await api.UpdateProfileAsync(name, surname, birthDate, gender, height, weight, avatar);
                 if (result.ok)
                 {
                     await DisplayAlert("OK", "Profil zaktualizowany", "OK");
@@ -70,6 +72,18 @@ namespace App1.Views
         {
             messageLabel.Text = text;
             messageLabel.IsVisible = true;
+        }
+
+        void Localize()
+        {
+            Title = L.T("Profile");
+            titleLabel.Text = L.T("Profile");
+            nameEntry.Placeholder = L.T("FirstName");
+            surnameEntry.Placeholder = L.T("LastName");
+            genderPicker.Title = L.T("Gender");
+            heightEntry.Placeholder = L.T("Height");
+            weightEntry.Placeholder = L.T("Weight");
+            saveBtn.Text = L.T("Save");
         }
     }
 }

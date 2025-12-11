@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Views.ActivityPage"
+             Title="Aktywność">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="historyToolbar" Text="Historia" Clicked="OnHistoryClicked" />
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="12">
+            <Label x:Name="titleLabel" Text="Nowa aktywność" FontSize="24" HorizontalOptions="Center" />
+            <Entry x:Name="nameEntry" Placeholder="Nazwa" Text="{Binding Name}" />
+            <Picker x:Name="typePicker" Title="Typ" SelectedItem="{Binding Type}">
+                <Picker.Items>
+                    <x:String>bieg</x:String>
+                    <x:String>rower</x:String>
+                    <x:String>spacer</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry x:Name="distanceEntry" Placeholder="Dystans (km, opcjonalnie)" Keyboard="Numeric" Text="{Binding DistanceText}" />
+
+            <Label x:Name="timeLabel" Text="Czas" FontAttributes="Bold" />
+            <Label Text="{Binding DurationText}" FontSize="28" HorizontalOptions="Center" />
+
+            <Label x:Name="paceLabel" Text="Tempo (min/km)" />
+            <Label Text="{Binding PaceText}" FontSize="18" />
+
+            <Label x:Name="speedLabel" Text="Prędkość (km/h)" />
+            <Label Text="{Binding SpeedText}" FontSize="18" />
+
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                <Button x:Name="startBtn" Text="Start" Command="{Binding StartCommand}" />
+                <Button x:Name="stopBtn" Text="Stop" Command="{Binding StopCommand}" />
+                <Button x:Name="saveBtn" Text="Zapisz" Command="{Binding SaveCommand}" />
+            </StackLayout>
+
+            <Editor x:Name="noteEditor" Placeholder="Notatka" AutoSize="TextChanges" HeightRequest="100" Text="{Binding Note}" />
+
+            <Button x:Name="photoBtn" Text="Dodaj zdjęcie" Command="{Binding PickPhotoCommand}" />
+            <Label x:Name="photoInfo" Text="{Binding PhotoBase64, StringFormat='Zdjęcie: {0:length} B'}" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+

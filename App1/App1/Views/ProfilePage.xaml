@@ -8,7 +8,7 @@
     <ScrollView>
         <StackLayout Padding="20" Spacing="12">
 
-            <Label Text="Profil" FontSize="26" HorizontalOptions="Center" />
+            <Label x:Name="titleLabel" Text="Profil" FontSize="26" HorizontalOptions="Center" />
 
             <Entry x:Name="nameEntry" Placeholder="Imię" />
             <Entry x:Name="surnameEntry" Placeholder="Nazwisko" />
@@ -26,6 +26,8 @@
 
             <Entry x:Name="heightEntry" Placeholder="Wzrost (cm)" Keyboard="Numeric" />
             <Entry x:Name="weightEntry" Placeholder="Waga (kg)" Keyboard="Numeric" />
+
+            <Entry x:Name="avatarEntry" Placeholder="Avatar (URL lub Base64)" />
 
             <Button x:Name="saveBtn" Text="Zapisz" Clicked="SaveBtn_Clicked" />
 

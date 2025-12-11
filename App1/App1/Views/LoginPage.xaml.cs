@@ -39,6 +39,35 @@ namespace FitnessApp.UI
                 case "Or": return "LUB";
                 case "InvalidEmail": return "Nieprawidłowy e-mail";
                 case "PasswordTooShort": return "Hasło za krótkie (min 6 znaków)";
+                case "History": return "Historia";
+                case "FilterType": return "Filtr typ";
+                case "Sort": return "Sortowanie";
+                case "Apply": return "Zastosuj";
+                case "Workouts": return "Treningi";
+                case "TotalDistance": return "Łączny dystans";
+                case "AvgSpeed": return "Śr. prędkość";
+                case "Ranking": return "Ranking";
+                case "Details": return "Szczegóły";
+                case "Type": return "Typ";
+                case "Distance": return "Dystans";
+                case "Time": return "Czas";
+                case "Pace": return "Tempo";
+                case "Speed": return "Prędkość";
+                case "Note": return "Notatka";
+                case "TrackPoints": return "Punkty trasy";
+                case "AddPhoto": return "Dodaj zdjęcie";
+                case "Save": return "Zapisz";
+                case "Activity": return "Aktywność";
+                case "ActivityNew": return "Nowa aktywność";
+                case "Profile": return "Profil";
+                case "FirstName": return "Imię";
+                case "LastName": return "Nazwisko";
+                case "BirthDate": return "Data urodzenia";
+                case "Gender": return "Płeć";
+                case "Height": return "Wzrost (cm)";
+                case "Weight": return "Waga (kg)";
+                case "ResetPasswordTitle": return "Reset hasła";
+                case "SendReset": return "Wyślij link resetujący";
                 default: return k;
             }
         }
@@ -60,6 +89,35 @@ namespace FitnessApp.UI
                 case "Or": return "OR";
                 case "InvalidEmail": return "Invalid email";
                 case "PasswordTooShort": return "Password too short (min 6)";
+                case "History": return "History";
+                case "FilterType": return "Filter type";
+                case "Sort": return "Sort";
+                case "Apply": return "Apply";
+                case "Workouts": return "Workouts";
+                case "TotalDistance": return "Total distance";
+                case "AvgSpeed": return "Avg speed";
+                case "Ranking": return "Leaderboard";
+                case "Details": return "Details";
+                case "Type": return "Type";
+                case "Distance": return "Distance";
+                case "Time": return "Time";
+                case "Pace": return "Pace";
+                case "Speed": return "Speed";
+                case "Note": return "Note";
+                case "TrackPoints": return "Track points";
+                case "AddPhoto": return "Add photo";
+                case "Save": return "Save";
+                case "Activity": return "Activity";
+                case "ActivityNew": return "New activity";
+                case "Profile": return "Profile";
+                case "FirstName": return "First name";
+                case "LastName": return "Last name";
+                case "BirthDate": return "Birth date";
+                case "Gender": return "Gender";
+                case "Height": return "Height (cm)";
+                case "Weight": return "Weight (kg)";
+                case "ResetPasswordTitle": return "Reset password";
+                case "SendReset": return "Send reset link";
                 default: return k;
             }
         }
@@ -150,8 +208,9 @@ namespace FitnessApp.UI
                 var (ok, msg) = await api.LoginAsync(email, pwd);
                 if (ok)
                 {
-                    await DisplayAlert("OK", "Zalogowano (placeholder). Response: " + msg, "OK");
-                    await Navigation.PushAsync(new ProfilePage(api));
+                    await DisplayAlert("OK", "Zalogowano", "OK");
+                    _ = api.GetActivitiesAsync(); 
+                    Application.Current.MainPage = new NavigationPage(new ActivityPage(api));
                 }
                 else
                 {
@@ -229,9 +288,9 @@ namespace FitnessApp.UI
                 var (ok, msg) = await api.RegisterAsync(name, email, pwd);
                 if (ok)
                 {
-                    await DisplayAlert("OK", "Konto utworzone (placeholder). Response: " + msg, "OK");
-                    await Navigation.PopAsync();
-                    Application.Current.MainPage = new NavigationPage(new ProfilePage(api));
+                    await DisplayAlert("OK", "Konto utworzone", "OK");
+                    _ = api.GetActivitiesAsync(); 
+                    Application.Current.MainPage = new NavigationPage(new ActivityPage(api));
                 }
                 else
                 {

@@ -14,6 +14,7 @@ namespace App1
             DependencyService.Register<MockDataStore>();
 
             var api = new ApiClient(new HttpClient());
+            _ = api.RestoreTokenAsync();
             MainPage = new NavigationPage(new LoginPage(api));
 
         }

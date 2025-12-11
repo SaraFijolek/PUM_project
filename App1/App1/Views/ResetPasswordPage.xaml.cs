@@ -1,41 +1,26 @@
 ﻿using System.Threading.Tasks;
 using Xamarin.Forms;
 using App1.Services;   // jeśli ApiClient tam jest
+using FitnessApp.UI;
 
 namespace App1.Views
 {
     public partial class ResetPasswordPage : ContentPage
     {
-        Entry emailEntry;
-        Button resetBtn;
-        Label messageLabel;
         ApiClient api;
 
         public ResetPasswordPage(ApiClient apiClient)
         {
-            InitializeComponent();   
-
+            InitializeComponent();
             api = apiClient;
-
-            emailEntry = new Entry { Placeholder = "E-mail", Keyboard = Keyboard.Email };
-            resetBtn = new Button { Text = "Wyślij link resetujący" };
-            resetBtn.Clicked += async (s, e) => await OnResetClicked();
-            messageLabel = new Label { TextColor = Color.Red, IsVisible = false };
-
-            Content = new StackLayout
-            {
-                Spacing = 12,
-                Children =
-                {
-                    new Label { Text = "Reset hasła", FontSize = 26, HorizontalOptions = LayoutOptions.Center },
-                    emailEntry,
-                    resetBtn,
-                    messageLabel
-                }
-            };
         }
 
-        async Task OnResetClicked()
+        async void OnResetClicked(object sender, System.EventArgs e)
+        {
+            await HandleReset();
+        }
+
+        async Task HandleReset()
         {
             messageLabel.IsVisible = false;
             var email = emailEntry.Text?.Trim();
@@ -62,10 +47,18 @@ namespace App1.Views
             messageLabel.IsVisible = true;
         }
 
-      
-        void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        protected override void OnAppearing()
         {
-            ((ListView)sender).SelectedItem = null;
+            base.OnAppearing();
+            Localize();
+        }
+
+        void Localize()
+        {
+            Title = L.T("ResetPasswordTitle");
+            titleLabel.Text = L.T("ResetPasswordTitle");
+            emailEntry.Placeholder = L.T("Email");
+            resetBtn.Text = L.T("SendReset");
         }
     }
 }
