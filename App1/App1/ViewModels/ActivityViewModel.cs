@@ -52,6 +52,19 @@ namespace App1.ViewModels
         string durationText = "00:00:00";
         bool isRunning;
 
+        string currentLocationText = "--";
+        public string CurrentLocationText
+        {
+            get => currentLocationText;
+            set => SetProperty(ref currentLocationText, value);
+        }
+        string distanceLiveText = "0.00 km";
+        public string DistanceLiveText
+        {
+            get => distanceLiveText;
+            set => SetProperty(ref distanceLiveText, value);
+        }
+
         public ActivityViewModel(ActivityStore store, ApiClient apiClient)
         {
             this.store = store;
@@ -64,20 +77,30 @@ namespace App1.ViewModels
             GoHistoryCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(Views.ActivityHistoryPage)));
         }
 
-        void OnStart()
+        async void OnStart()
         {
             if (IsRunning) return;
+
+            if (!await CheckGpsPermission())
+                return;
+
+            Track.Clear();
+            DistanceKm = 0;
+
             startTime = DateTime.Now;
             stopwatch.Restart();
             IsRunning = true;
+
             gpsCts = new CancellationTokenSource();
             _ = StartGpsAsync(gpsCts.Token);
+
             Device.StartTimer(TimeSpan.FromSeconds(1), () =>
             {
                 DurationText = stopwatch.Elapsed.ToString(@"hh\:mm\:ss");
                 UpdatePaceAndSpeed();
                 return IsRunning;
             });
+
             UpdateCommands();
         }
 
@@ -151,35 +174,53 @@ namespace App1.ViewModels
 
         async Task StartGpsAsync(CancellationToken ct)
         {
-            var request = new GeolocationRequest(GeolocationAccuracy.Best, TimeSpan.FromSeconds(5));
+            var request = new GeolocationRequest(
+                GeolocationAccuracy.Best,
+                TimeSpan.FromSeconds(5));
+
             while (!ct.IsCancellationRequested)
             {
                 try
                 {
                     var loc = await Geolocation.GetLocationAsync(request, ct);
-                    if (loc != null)
+
+                    if (loc == null)
+                    {
+                        CurrentLocationText = "Brak GPS";
+                    }
+                    else
+                    {
+                        CurrentLocationText =
+                            $"{loc.Latitude:F6}, {loc.Longitude:F6}";
+
                         AddPoint(loc);
+                    }
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                   
+                    CurrentLocationText = "GPS error";
                 }
-                try
-                {
-                    await Task.Delay(2000, ct);
-                }
-                catch (TaskCanceledException) { }
+
+                await Task.Delay(2000, ct);
             }
         }
 
         void AddPoint(Location loc)
         {
+            CurrentLocationText =
+                $"{loc.Latitude:F6}, {loc.Longitude:F6}";
+
             if (Track.Count > 0)
             {
                 var prev = Track[Track.Count - 1];
                 DistanceKm += HaversineKm(prev, loc);
             }
+
             Track.Add(loc);
+
+            DistanceLiveText = $"{DistanceKm:0.00} km";
+
+            UpdatePaceAndSpeed();
         }
 
         double HaversineKm(Location a, Location b)
@@ -206,11 +247,20 @@ namespace App1.ViewModels
             }
 
             var elapsed = stopwatch.Elapsed;
+
+            if (elapsed.TotalSeconds < 1)
+            {
+                PaceText = SpeedText = "--";
+                return;
+            }
+
             var hours = elapsed.TotalHours;
+
             SpeedText = (DistanceKm / hours).ToString("0.0") + " km/h";
 
             var minutesPerKm = elapsed.TotalMinutes / DistanceKm;
             var span = TimeSpan.FromMinutes(minutesPerKm);
+
             PaceText = span.ToString(@"mm\:ss") + " /km";
         }
 
@@ -231,6 +281,15 @@ namespace App1.ViewModels
             {
                 
             }
+        }
+        async Task<bool> CheckGpsPermission()
+        {
+            var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
+
+            if (status != PermissionStatus.Granted)
+                status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+
+            return status == PermissionStatus.Granted;
         }
 
         void UpdateCommands()

@@ -1,4 +1,4 @@
-﻿using App1.Services;
+﻿﻿﻿﻿﻿﻿﻿﻿using App1.Services;
 using App1.Views;
 using Newtonsoft.Json;
 using System;
@@ -68,6 +68,8 @@ namespace FitnessApp.UI
                 case "Weight": return "Waga (kg)";
                 case "ResetPasswordTitle": return "Reset hasła";
                 case "SendReset": return "Wyślij link resetujący";
+                case "Logout": return "Wyloguj";
+                case "NoLeaderboardData": return "Brak danych rankingu w tym tygodniu. Zapisz aktywność.";
                 default: return k;
             }
         }
@@ -118,6 +120,8 @@ namespace FitnessApp.UI
                 case "Weight": return "Weight (kg)";
                 case "ResetPasswordTitle": return "Reset password";
                 case "SendReset": return "Send reset link";
+                case "Logout": return "Logout";
+                case "NoLeaderboardData": return "No leaderboard data this week. Save an activity.";
                 default: return k;
             }
         }
@@ -210,7 +214,7 @@ namespace FitnessApp.UI
                 {
                     await DisplayAlert("OK", "Zalogowano", "OK");
                     _ = api.GetActivitiesAsync(); 
-                    Application.Current.MainPage = new NavigationPage(new ActivityPage(api));
+                    Application.Current.MainPage = new NavigationPage(new ProfilePage(api));
                 }
                 else
                 {
@@ -290,7 +294,7 @@ namespace FitnessApp.UI
                 {
                     await DisplayAlert("OK", "Konto utworzone", "OK");
                     _ = api.GetActivitiesAsync(); 
-                    Application.Current.MainPage = new NavigationPage(new ActivityPage(api));
+                    Application.Current.MainPage = new NavigationPage(new ProfilePage(api));
                 }
                 else
                 {

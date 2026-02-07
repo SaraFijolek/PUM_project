@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿﻿﻿﻿using Newtonsoft.Json;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using App1.Models;
 using System.Collections.Generic;
 using Xamarin.Essentials;
+using System;
 
 
 public class ApiClient
@@ -14,7 +15,7 @@ public class ApiClient
 
     const string TokenKey = "auth_token";
 
-    public const string DefaultBaseUrl = " ";
+    public const string DefaultBaseUrl = "http://10.0.2.2:5000/api";
     public string BaseUrl { get; set; } = DefaultBaseUrl;
     public string AuthToken { get; private set; }
 
@@ -44,6 +45,13 @@ public class ApiClient
         await SecureStorage.SetAsync(TokenKey, token);
     }
 
+    public async Task LogoutAsync()
+    {
+        SetAuthToken(null);
+        try { SecureStorage.Remove(TokenKey); } catch { }
+        await Task.CompletedTask;
+    }
+
     public async Task<HttpResponseMessage> PostAsync(string path, object payload, bool authRequired = false)
     {
         if (authRequired && string.IsNullOrWhiteSpace(AuthToken))
@@ -52,6 +60,16 @@ public class ApiClient
         var json = JsonConvert.SerializeObject(payload);
         var content = new StringContent(json, Encoding.UTF8, "application/json");
         return await _http.PostAsync($"{BaseUrl}{path}", content);
+    }
+
+    public async Task<HttpResponseMessage> PutAsync(string path, object payload, bool authRequired = false)
+    {
+        if (authRequired && string.IsNullOrWhiteSpace(AuthToken))
+            return new HttpResponseMessage(System.Net.HttpStatusCode.Unauthorized) { ReasonPhrase = "Missing token" };
+
+        var json = JsonConvert.SerializeObject(payload);
+        var content = new StringContent(json, Encoding.UTF8, "application/json");
+        return await _http.PutAsync($"{BaseUrl}{path}", content);
     }
 
     public async Task<(bool ok, string message)> LoginAsync(string email, string password)
@@ -71,7 +89,19 @@ public class ApiClient
 
     public async Task<(bool ok, string message)> RegisterAsync(string name, string email, string password)
     {
-        var res = await PostAsync("/auth/register", new { name, email, password });
+        var res = await PostAsync("/register", new {
+            Email = email,
+            Password = password,
+            ConfirmPassword = password,
+            FirstName = name,
+            LastName = "",
+            BirthDate = System.DateTime.Today.AddYears(-20),
+            Gender = "unknown",
+            HeightCm = 170,
+            WeightKg = 70.0,
+            AvatarUrl = "",
+            PreferredLanguage = "pl"
+        });
         var body = await res.Content.ReadAsStringAsync();
         if (res.IsSuccessStatusCode)
             return (true, body);
@@ -87,17 +117,17 @@ public class ApiClient
             double? weight,
             string avatarBase64)
     {
-        var res = await PostAsync(
-            "/user/profile",
+        var res = await PutAsync(
+            "/me",
             new
             {
-                name,
-                surname,
-                birthDate,
-                gender,
-                height,
-                weight,
-                avatar = avatarBase64
+                FirstName = name,
+                LastName = surname,
+                BirthDate = birthDate,
+                Gender = gender,
+                HeightCm = height.HasValue ? (int?)Convert.ToInt32(Math.Round(height.Value)) : null,
+                WeightKg = weight.HasValue ? (decimal?)Convert.ToDecimal(weight.Value) : null,
+                AvatarUrl = string.IsNullOrWhiteSpace(avatarBase64) ? null : avatarBase64
             },
             authRequired: true);
 

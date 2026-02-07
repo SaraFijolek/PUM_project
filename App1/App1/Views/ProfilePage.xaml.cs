@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿﻿﻿using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using App1.Services;
@@ -23,6 +23,17 @@ namespace App1.Views
         private async void SaveBtn_Clicked(object sender, EventArgs e)
         {
             await OnSaveClicked();
+        }
+
+        private async void ActivityBtn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ActivityPage(api));
+        }
+
+        private async void LogoutBtn_Clicked(object sender, EventArgs e)
+        {
+            await api.LogoutAsync();
+            Application.Current.MainPage = new NavigationPage(new FitnessApp.UI.LoginPage(api));
         }
 
         
@@ -84,6 +95,8 @@ namespace App1.Views
             heightEntry.Placeholder = L.T("Height");
             weightEntry.Placeholder = L.T("Weight");
             saveBtn.Text = L.T("Save");
+            activityBtn.Text = L.T("Activity");
+            logoutBtn.Text = L.T("Logout");
         }
     }
 }

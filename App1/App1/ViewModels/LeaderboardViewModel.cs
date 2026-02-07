@@ -10,6 +10,8 @@ namespace App1.ViewModels
     {
         readonly ApiClient api;
         public ObservableCollection<LeaderboardEntry> Items { get; } = new ObservableCollection<LeaderboardEntry>();
+        public string Message { get => message; set => SetProperty(ref message, value); }
+        string message;
 
         public LeaderboardViewModel(ApiClient client)
         {
@@ -23,8 +25,9 @@ namespace App1.ViewModels
             Items.Clear();
             foreach (var e in data)
                 Items.Add(e);
+
+            Message = Items.Count == 0 ? FitnessApp.UI.L.T("NoLeaderboardData") : null;
         }
     }
 }
-
 

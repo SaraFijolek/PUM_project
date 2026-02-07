@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Views.LeaderboardPage"
              Title="Ranking">
-    <CollectionView x:Name="list" ItemsSource="{Binding Items}">
+    <StackLayout Padding="20" Spacing="12">
+        <Label Text="{Binding Message}" TextColor="Gray" />
+        <CollectionView x:Name="list" ItemsSource="{Binding Items}">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <StackLayout Padding="10">
@@ -13,6 +15,6 @@
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
-    </CollectionView>
+        </CollectionView>
+    </StackLayout>
 </ContentPage>
-
