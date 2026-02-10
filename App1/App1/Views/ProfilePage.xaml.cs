@@ -10,6 +10,36 @@ namespace App1.Views
     {
         private readonly ApiClient api;
 
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            await LoadProfileAsync();
+        }
+        private async Task LoadProfileAsync()
+        {
+            try
+            {
+                var profile = await api.GetProfileAsync();
+
+                if (profile == null)
+                    return;
+
+                nameEntry.Text = profile.FirstName;
+                surnameEntry.Text = profile.LastName;
+                birthDatePicker.Date = profile.BirthDate;
+
+                if (!string.IsNullOrEmpty(profile.Gender))
+                    genderPicker.SelectedItem = profile.Gender;
+
+                heightEntry.Text = profile.HeightCm.ToString();
+                weightEntry.Text = profile.WeightKg.ToString();
+               
+            }
+            catch (Exception ex)
+            {
+                ShowError(ex.Message);
+            }
+        }
         public ProfilePage(ApiClient apiClient)
         {
             InitializeComponent();

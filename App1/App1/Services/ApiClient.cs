@@ -107,7 +107,15 @@ public class ApiClient
             return (true, body);
         return (false, body);
     }
+    public async Task<Profile> GetProfileAsync()
+           
+    {
+        var res =  await _http.GetAsync($"{BaseUrl}/me");
 
+        var body = await res.Content.ReadAsStringAsync();
+
+         return JsonConvert.DeserializeObject<Profile>(body);
+    }
     public async Task<(bool ok, string message)> UpdateProfileAsync(
             string name,
             string surname,
@@ -167,7 +175,7 @@ public class ApiClient
 
     public async Task<List<LeaderboardEntry>> GetLeaderboardAsync()
     {
-        var res = await _http.GetAsync($"{BaseUrl}/leaderboard/weekly");
+        var res = await _http.GetAsync($"{BaseUrl}/rankings/weekly");
         if (!res.IsSuccessStatusCode)
             return new List<LeaderboardEntry>();
 
