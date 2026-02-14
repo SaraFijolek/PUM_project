@@ -32,7 +32,7 @@ namespace App1.Views
             titleLabel.Text = L.T("ActivityNew");
             nameEntry.Placeholder = L.T("Name");
             typePicker.Title = L.T("Type");
-            distanceEntry.Placeholder = $"{L.T("Distance")} (km)";
+            distanceLabel.Text = $"{L.T("Distance")} (km)";
             timeLabel.Text = L.T("Time");
             paceLabel.Text = L.T("Pace");
             speedLabel.Text = L.T("Speed");

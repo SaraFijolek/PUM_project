@@ -120,26 +120,29 @@ namespace App1.ViewModels
             if (!startTime.HasValue)
                 return;
 
-            double? distanceKmOverride = null;
+            decimal? distanceKmOverride = null;
             if (double.TryParse(DistanceText, out var parsed))
-                distanceKmOverride = parsed;
+                distanceKmOverride = (decimal)parsed;
 
             var activity = new Activity
             {
                 Name = string.IsNullOrWhiteSpace(Name) ? "Aktywność" : Name.Trim(),
                 StartTime = startTime.Value,
                 EndTime = startTime.Value + stopwatch.Elapsed,
-                DistanceKm = distanceKmOverride ?? DistanceKm,
+                DistanceKm = DistanceKm,  // override lub GPS
                 Note = Note,
                 Type = string.IsNullOrWhiteSpace(Type) ? "bieg" : Type,
                 PaceText = PaceText,
                 SpeedText = SpeedText,
                 PhotoBase64 = PhotoBase64,
-                Track = Track.Select(p => new GpsPoint { Latitude = p.Latitude, Longitude = p.Longitude }).ToList()
+                Track = Track.Select(p => new GpsPoint
+                {
+                    Latitude = p.Latitude,
+                    Longitude = p.Longitude
+                }).ToList()
             };
 
             await store.AddAsync(activity);
-
 
             _ = apiClient.CreateActivityAsync(new
             {
@@ -164,11 +167,13 @@ namespace App1.ViewModels
             Name = string.Empty;
             Note = string.Empty;
             Type = string.Empty;
-            DistanceText = string.Empty;
             DurationText = "00:00:00";
             startTime = null;
             stopwatch.Reset();
             IsRunning = false;
+            DistanceKm = 0;
+            DistanceLiveText = "0.00 km";
+            Track.Clear();
             UpdateCommands();
         }
 

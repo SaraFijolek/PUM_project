@@ -17,7 +17,7 @@
                     <x:String>spacer</x:String>
                 </Picker.Items>
             </Picker>
-            <Entry x:Name="distanceEntry" Placeholder="Dystans (km, opcjonalnie)" Keyboard="Numeric" Text="{Binding DistanceText}" />
+            <Label x:Name="distanceLabel" Text="Dystans (km)" FontAttributes="Bold" />
 
             <Label x:Name="timeLabel" Text="Czas" FontAttributes="Bold" />
             <Label Text="{Binding DurationText}" FontSize="28" HorizontalOptions="Center" />

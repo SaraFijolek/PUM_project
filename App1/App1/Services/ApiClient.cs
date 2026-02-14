@@ -15,7 +15,7 @@ public class ApiClient
 
     const string TokenKey = "auth_token";
 
-    public const string DefaultBaseUrl = "http://10.0.2.2:5000/api";
+    public const string DefaultBaseUrl = "http://api.mkproj.space/api";
     public string BaseUrl { get; set; } = DefaultBaseUrl;
     public string AuthToken { get; private set; }
 

@@ -3,52 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\models\\profile .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\models\\profile .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\views\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\views\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\services\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\services\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\views\\activitypage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
-      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\views\\activitypage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\models\\activity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\models\\activity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\views\\activitypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\views\\activitypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\views\\activityhistorypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\views\\activityhistorypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\viewmodels\\leaderboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\viewmodels\\leaderboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\services\\activitystore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\services\\activitystore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\viewmodels\\activityviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\viewmodels\\activityviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\viewmodels\\activityhistoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\viewmodels\\activityhistoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\views\\activitydetailpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
-      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\views\\activitydetailpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\views\\activityhistorypage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\views\\activityhistorypage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\views\\profilepage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
-      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\views\\profilepage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\views\\activitypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\views\\activitypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\views\\aboutpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
-      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\views\\aboutpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\services\\activitystore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\services\\activitystore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\views\\activityhistorypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\views\\activityhistorypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|c:\\users\\saras\\onedrive\\dokumenty\\programowanie-projekty\\mobileapp\\app1\\app1\\app1\\views\\activitydetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4BA926-2B20-4250-9CB4-250F78340FED}|App1\\App1\\App1.csproj|solutionrelative:app1\\app1\\views\\activitydetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -89,157 +77,118 @@
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f96a0d64-71fd-316f-b663-924c78154f2a}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Profile .cs",
-              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Models\\Profile .cs",
-              "RelativeDocumentMoniker": "App1\\App1\\Models\\Profile .cs",
-              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Models\\Profile .cs",
-              "RelativeToolTip": "App1\\App1\\Models\\Profile .cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T18:29:23.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ActivityHistoryPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityHistoryPage.xaml.cs",
-              "RelativeDocumentMoniker": "App1\\App1\\Views\\ActivityHistoryPage.xaml.cs",
-              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityHistoryPage.xaml.cs",
-              "RelativeToolTip": "App1\\App1\\Views\\ActivityHistoryPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-31T17:22:08.271Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ActivityPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityPage.xaml.cs",
-              "RelativeDocumentMoniker": "App1\\App1\\Views\\ActivityPage.xaml.cs",
-              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityPage.xaml.cs",
-              "RelativeToolTip": "App1\\App1\\Views\\ActivityPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-31T17:20:45.419Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ActivityPage.xaml",
-              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityPage.xaml",
-              "RelativeDocumentMoniker": "App1\\App1\\Views\\ActivityPage.xaml",
-              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityPage.xaml",
-              "RelativeToolTip": "App1\\App1\\Views\\ActivityPage.xaml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-29T19:26:08.271Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "ApiClient.cs",
               "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Services\\ApiClient.cs",
               "RelativeDocumentMoniker": "App1\\App1\\Services\\ApiClient.cs",
               "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Services\\ApiClient.cs",
               "RelativeToolTip": "App1\\App1\\Services\\ApiClient.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAkwG0AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T16:03:45.447Z",
+              "WhenOpened": "2026-02-12T16:27:54.113Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProfilePage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ProfilePage.xaml.cs",
-              "RelativeDocumentMoniker": "App1\\App1\\Views\\ProfilePage.xaml.cs",
-              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ProfilePage.xaml.cs",
-              "RelativeToolTip": "App1\\App1\\Views\\ProfilePage.xaml.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-29T17:24:34.375Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LeaderboardViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\ViewModels\\LeaderboardViewModel.cs",
-              "RelativeDocumentMoniker": "App1\\App1\\ViewModels\\LeaderboardViewModel.cs",
-              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\ViewModels\\LeaderboardViewModel.cs",
-              "RelativeToolTip": "App1\\App1\\ViewModels\\LeaderboardViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T18:09:13.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ActivityStore.cs",
-              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Services\\ActivityStore.cs",
-              "RelativeDocumentMoniker": "App1\\App1\\Services\\ActivityStore.cs",
-              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Services\\ActivityStore.cs",
-              "RelativeToolTip": "App1\\App1\\Services\\ActivityStore.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T18:08:54.186Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "ActivityHistoryViewModel.cs",
               "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\ViewModels\\ActivityHistoryViewModel.cs",
               "RelativeDocumentMoniker": "App1\\App1\\ViewModels\\ActivityHistoryViewModel.cs",
               "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\ViewModels\\ActivityHistoryViewModel.cs",
               "RelativeToolTip": "App1\\App1\\ViewModels\\ActivityHistoryViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T15:53:44.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ActivityViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\ViewModels\\ActivityViewModel.cs",
+              "RelativeDocumentMoniker": "App1\\App1\\ViewModels\\ActivityViewModel.cs",
+              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\ViewModels\\ActivityViewModel.cs",
+              "RelativeToolTip": "App1\\App1\\ViewModels\\ActivityViewModel.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAcwBAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T09:49:58.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ActivityHistoryPage.xaml",
+              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityHistoryPage.xaml",
+              "RelativeDocumentMoniker": "App1\\App1\\Views\\ActivityHistoryPage.xaml",
+              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityHistoryPage.xaml",
+              "RelativeToolTip": "App1\\App1\\Views\\ActivityHistoryPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-11T20:34:16.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ActivityPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityPage.xaml.cs",
+              "RelativeDocumentMoniker": "App1\\App1\\Views\\ActivityPage.xaml.cs",
+              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityPage.xaml.cs",
+              "RelativeToolTip": "App1\\App1\\Views\\ActivityPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-10T18:09:08.588Z",
+              "WhenOpened": "2026-02-11T20:41:47.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Activity.cs",
+              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Models\\Activity.cs",
+              "RelativeDocumentMoniker": "App1\\App1\\Models\\Activity.cs",
+              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Models\\Activity.cs",
+              "RelativeToolTip": "App1\\App1\\Models\\Activity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T09:50:43.702Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AboutPage.xaml",
-              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\AboutPage.xaml",
-              "RelativeDocumentMoniker": "App1\\App1\\Views\\AboutPage.xaml",
-              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\AboutPage.xaml",
-              "RelativeToolTip": "App1\\App1\\Views\\AboutPage.xaml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-29T17:25:28.362Z"
+              "DocumentIndex": 6,
+              "Title": "ActivityStore.cs",
+              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Services\\ActivityStore.cs",
+              "RelativeDocumentMoniker": "App1\\App1\\Services\\ActivityStore.cs",
+              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Services\\ActivityStore.cs",
+              "RelativeToolTip": "App1\\App1\\Services\\ActivityStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T09:49:29.451Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ProfilePage.xaml",
-              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ProfilePage.xaml",
-              "RelativeDocumentMoniker": "App1\\App1\\Views\\ProfilePage.xaml",
-              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ProfilePage.xaml",
-              "RelativeToolTip": "App1\\App1\\Views\\ProfilePage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-29T15:54:48.993Z"
+              "DocumentIndex": 7,
+              "Title": "ActivityHistoryPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityHistoryPage.xaml.cs",
+              "RelativeDocumentMoniker": "App1\\App1\\Views\\ActivityHistoryPage.xaml.cs",
+              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityHistoryPage.xaml.cs",
+              "RelativeToolTip": "App1\\App1\\Views\\ActivityHistoryPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T20:34:03.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ActivityDetailPage.xaml",
-              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityDetailPage.xaml",
-              "RelativeDocumentMoniker": "App1\\App1\\Views\\ActivityDetailPage.xaml",
-              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityDetailPage.xaml",
-              "RelativeToolTip": "App1\\App1\\Views\\ActivityDetailPage.xaml",
+              "DocumentIndex": 8,
+              "Title": "ActivityDetailPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityDetailPage.xaml.cs",
+              "RelativeDocumentMoniker": "App1\\App1\\Views\\ActivityDetailPage.xaml.cs",
+              "ToolTip": "C:\\Users\\saras\\OneDrive\\Dokumenty\\programowanie-projekty\\MobileApp\\App1\\App1\\App1\\Views\\ActivityDetailPage.xaml.cs",
+              "RelativeToolTip": "App1\\App1\\Views\\ActivityDetailPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-30T10:23:14.232Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T20:41:43.476Z"
             }
           ]
         }

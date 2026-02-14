@@ -52,8 +52,14 @@
                         <StackLayout>
                             <Label Text="{Binding Name}" FontAttributes="Bold" />
                             <Label Text="{Binding StartTime, StringFormat='{0:dd.MM.yyyy HH:mm}'}" />
-                            <Label Text="{Binding DistanceKm, StringFormat='{}{0:0.00} km'}" />
-                            <Label Text="{Binding Type}" />
+                            <Label>
+                                <Label.Text>
+                                    <Binding Path="DistanceKm" StringFormat="{}{0:0.00} km">
+                                        <Binding.TargetNullValue>0.00 km</Binding.TargetNullValue>
+                                    </Binding>
+                                </Label.Text>
+                            </Label>
+                            <Label Text="{Binding Type}" FontAttributes="Bold" />
                             <Label Text="{Binding PaceText}" />
                         </StackLayout>
                     </Frame>

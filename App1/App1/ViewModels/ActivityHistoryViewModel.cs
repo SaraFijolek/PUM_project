@@ -97,13 +97,21 @@ namespace App1.ViewModels
             }
 
             Items.Clear();
-            foreach (var a in query) Items.Add(a);
+            foreach (var a in query)
+            {
+                // DEBUG - wypisz wartości
+                System.Diagnostics.Debug.WriteLine($"Aktywność: {a.Name}, Dystans: {a.DistanceKm}");
+                Items.Add(a);
+            }
 
             TotalActivities = Items.Count;
             TotalDistance = Items.Sum(a => a.DistanceKm ?? 0);
-
             var totalHours = Items.Where(a => a.Duration.HasValue).Sum(a => a.Duration.Value.TotalHours);
             AvgSpeed = totalHours > 0 ? TotalDistance / totalHours : 0;
+
+            // DEBUG - podsumowanie
+            System.Diagnostics.Debug.WriteLine($"Total: {TotalActivities} aktywności, {TotalDistance:0.00} km");
+
         }
     }
 }
